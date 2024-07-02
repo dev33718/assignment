@@ -1,0 +1,13 @@
+CREATE DATABASE account;
+
+CREATE TABLE accounts (
+  user_id SERIAL PRIMARY KEY,
+  first_name VARCHAR(100),
+  last_name VARCHAR(100),
+  email VARCHAR(100) UNIQUE NOT NULL,
+  phone VARCHAR(16),
+  password VARCHAR(255),
+  birthday DATE,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  last_modified TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
